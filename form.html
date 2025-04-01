@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="form-icon">
+                <span class="material-icons" style="color: #673ab7;">description</span>
+            </div>
+            <div class="form-title">RSVP</div>
+            <div class="form-actions">
+                <span class="material-icons">folder</span>
+                <span class="material-icons">star_border</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <span class="material-icons">comment</span>
+            <span class="material-icons">visibility</span>
+            <span class="material-icons">undo</span>
+            <span class="material-icons">redo</span>
+            <span class="material-icons">insert_link</span>
+            <span class="material-icons">account_circle</span>
+            <button class="publish-btn">Publish</button>
+            <span class="material-icons">more_vert</span>
+        </div>
+    </header>
+
+    <nav>
+        <div class="tabs">
+            <div class="tab active">Questions</div>
+            <div class="tab">Responses</div>
+            <div class="tab">Settings</div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="form-container">
+            <div class="banner">
+                <img src="images/images.jpg" alt="Event gathering">
+            </div>
+
+            <div class="form-section title-section">
+                <div class="form-content">
+                    <div class="title-area">
+                        <h1>Event RSVP</h1>
+                        <div class="title-underline"></div>
+                    </div>
+                    
+                    <div class="formatting-toolbar">
+                        <button class="toolbar-btn"><strong>B</strong></button>
+                        <button class="toolbar-btn"><em>I</em></button>
+                        <button class="toolbar-btn"><u>U</u></button>
+                        <button class="toolbar-btn"><span class="material-icons" style="font-size: 18px;">link</span></button>
+                        <button class="toolbar-btn"><span style="text-decoration: line-through;">S</span></button>
+                    </div>
+                    
+                    <div class="event-details">
+                        <p>Event Address: 123 Your Street Your City, ST 12345</p>
+                        <p>Contact us at (123) 456-7890 or <a href="mailto:no.reply@example.com">no.reply@example.com</a></p>
+                    </div>
+                </div>
+                <div class="form-sidebar">
+                    <div class="sidebar-btn"><span class="material-icons">add</span></div>
+                    <div class="sidebar-btn"><span class="material-icons">content_copy</span></div>
+                    <div class="sidebar-btn"><span class="material-icons">text_format</span></div>
+                    <div class="sidebar-btn"><span class="material-icons">image</span></div>
+                    <div class="sidebar-btn"><span class="material-icons">smart_display</span></div>
+                    <div class="sidebar-btn"><span class="material-icons">view_stream</span></div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-content">
+                    <div class="question">
+                        <p class="question-text">Can you attend? <span class="required">*</span></p>
+                        <div class="options">
+                            <div class="option">
+                                <input type="radio" id="yes" name="attendance" value="yes">
+                                <label for="yes">Yes, I'll be there</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="no" name="attendance" value="no">
+                                <label for="no">Sorry, can't make it</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-content">
+                    <div class="question">
+                        <p class="question-text">What are the names of people attending?</p>
+                        <div class="text-input">
+                            <input type="text" placeholder="Long-answer text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-content">
+                    <div class="question">
+                        <p class="question-text">How did you hear about this event?</p>
+                        <div class="options">
+                            <div class="option">
+                                <input type="radio" id="website" name="source" value="website">
+                                <label for="website">Website</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="friend" name="source" value="friend">
+                                <label for="friend">Friend</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="newsletter" name="source" value="newsletter">
+                                <label for="newsletter">Newsletter</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="advertisement" name="source" value="advertisement">
+                                <label for="advertisement">Advertisement</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-content">
+                    <div class="question">
+                        <p class="question-text">Comments and/or questions</p>
+                        <div class="text-input">
+                            <input type="text" placeholder="Long-answer text">
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+               
+            </div>
+            <button id="prankButton" onclick="redirectToPrank()" style="color: white; background-color: blue; float: right; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+
+<script>
+    function redirectToPrank() {
+        window.location.href = "success.html";
+    }
+</script>
+
+            
+
+   
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <span class="material-icons">help_outline</span>
+        </div>
+    </footer>
+
+
+</body>
+</html>

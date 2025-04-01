@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successful Submitted</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffcccb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        #message {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .confetti {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: hsl(calc(360 * var(--i)), 100%, 50%);
+            animation: fall 3s linear infinite;
+        }
+        @keyframes fall {
+            from {
+                transform: translateY(-100vh);
+            }
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="message">April Fools! 🎉</h1>
+    <p>We got you! This is just a prank. 😄</p>
+
+    <div class="confetti" id="confetti"></div>
+
+    <script>
+        function triggerConfetti() {
+            const confettiContainer = document.getElementById('confetti');
+            let confettiCount = 100;
+            for (let i = 0; i < confettiCount; i++) {
+                const confettiPiece = document.createElement('div');
+                confettiPiece.classList.add('confetti-piece');
+                confettiPiece.style.setProperty('--i', Math.random());
+                confettiPiece.style.left = Math.random() * 100 + 'vw';
+                confettiPiece.style.animationDuration = Math.random() * 3 + 2 + 's';
+                confettiContainer.appendChild(confettiPiece);
+            }
+        }
+        triggerConfetti();
+    </script>
+</body>
+</html>
